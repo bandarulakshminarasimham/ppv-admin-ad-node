@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "docker:build": "docker build --no-cache -t  local/ppv-admin-ad-node .",
+    "docker:start": "docker run --rm -p 80:3000 local/ppv-admin-ad-node"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
